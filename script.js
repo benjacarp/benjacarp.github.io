@@ -109,7 +109,7 @@ const modoDisplay = document.getElementById('modo');
 
 // Function to display the random number associated with an animal
 function displayRandomNumber() {
-    animalDisplayElement.textContent = randomNumber;
+    animalDisplayElement.textContent = randomNumber + ' ?';
 }
 
 function displayModo() {
@@ -118,7 +118,7 @@ function displayModo() {
 
 
 function displayRandomAnimal() {
-    animalDisplayElement.textContent = randomAnimal;
+    animalDisplayElement.textContent = randomAnimal + ' ???';
 }
 
 // Function to reveal the correct animal or number
@@ -133,6 +133,9 @@ function revealAnimal() {
         animalDisplayElement.textContent = getKeyByValue(randomAnimal); // REVISAR ESTA PARTE
     }
     revealButton.disabled = true; // Disable the "Reveal" button after revealing the animal
+	animalDisplayElement.style.fontWeight = 'bold';
+	refreshButton.disabled = false;
+	
 }
 
 function getKeyByValue(value) {
@@ -156,6 +159,8 @@ function refreshGame() {
         displayRandomAnimal();
     }
 	modoDisplay.textContent = animalMode;
+	animalDisplayElement.style.fontWeight = '';
+	refreshButton.disabled = true;
      // Display the new random number associated with an animal
 }
 

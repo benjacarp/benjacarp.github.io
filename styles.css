@@ -79,6 +79,12 @@ p#error {
   cursor: not-allowed; /* Change cursor to not-allowed */
 }
 
+#refreshButton:disabled {
+  background-color: #ccc; /* Gray background */
+  color: #666; /* Darker gray text */
+  cursor: not-allowed; /* Change cursor to not-allowed */
+}
+
 #animalDisplay {
     width: 400px; /* Adjust width as needed */
     height: 100px; /* Adjust height as needed */
